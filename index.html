@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TL CLINIC – Phần mềm quản lý phòng khám</title>
+<meta name="description" content="Phần mềm quản lý phòng khám TL CLINIC: đặt lịch, khám, kê đơn, cận lâm sàng, thu ngân, bệnh án điện tử. Ưu đãi đến 31/12/2026.">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAMFBMVEUAAAAwQZ0drUwvQJscqkssLX8vO5cCvD5VVaofSp4AAP8UqE0Ec3UvQ5gA/QEcqkvLqbjxAAAAEHRSTlMA+vqcbwMWBAMMAQ0CYwGVs3xw8AAABElJREFUeNqFll9oW1Ucxz89ufnTNqY7DZT50LSgZdUybJnKBCl9cMpMC/dBQVYL7XzQvfVFGOIkDgZ1OAhjgljQKlTqRMmw6aAiXIdCxdmmlWF0Wu4Yuj2V0KVdm5BbH25ye/8lPS/h/s43n/v7/s655/zAPTLzm08lWz3hJk9ESQAJzR0OuAOTkQLwYKtyADFcSQCQmFQbCyfXdADE342JNSAk+tONhDUgLJc6GpgJ/7IHiK4CXO8r5O1TwiE8Mwjw4Q0gE89SX3hFB5pHATB+dfhWHMJBHbgQHgFg5H5domICq6RiWa0jnBwEOLFVez6U9ReGr+hAcHq/dPYsbTmeWdOBD9iftWcpXMDm122Uog0pXDW8ULS7G8l6hVWghVA1p3FLuGsC92lvO40LZw1tCV5VHcYtoRvI0qwjy6rwngfIzjuq3Xh1m1UiBeDlJTOLvTZoO5xeCwHfrBh24c09IPhjyS786ZLMQ6nneN726g2Ak/PO7f7uHMDd7H6OrUo/8Of0kFNYvK4CRp9qrXU2+ZFCNqh3u7684VIrcPdWTRgc4iQQc+soplczYPR1Z0xh8n3znbI6H71n7dCQhRQQzAxRb5RUwCirIGhJDtTVEZkFiGdnEEx/p9cXmstj9C0SaNmNFFyzoWIbtB1eAriZCwEPVoxA4I+HNBCWftjNw17PW+KsQcMxPAugTykpCfQePWbujRwc4/eP7bXUVlPQtKNMZEAc+cSMNqe5+SYxJ7ISAR5VcsBjc1cB0B6eRXypVMYcy6N9noGSogNPXjRLnl4FTu+E8SINAURmhxrZKb6k1rZZgIOHAEo7aiNJdCEHiG4wnnu1kfCFMR2E6Af++teLjL23sbERA4ILy0BAfAYYX3uRm+3t7e2bQHJMBxaV1DUd1rNqxiX8XgM4QXChDxDHlVQgBsbtSbfwCMAjrVvJ+LdAZ060nOsG1rNqPcvLgMjPiO3eNcC4nfUXzo/oQOf5ccFpE5nU/HRNL64DIt+BYPuJNcD4b9hP+MUlHei8PI6AiXPdwD+v+GU5+ikg8iFQYHuqHAPjVs46U/dv/9cyQKc6Xn1MDUgp45pKZGrKWfoBKWU8Yt3XkXIMeDxXrs1vmD+X72SALjVl/dFEpl1ZRkPSAlbPR7OWX7lqOT8K0HneFmrxQ9aAM/bgXEBKKZ+P2mPahJRS9l90vKUlbSLty2MCm2ec+ZjIZ+xIP6BlfFzztWzve4JGDOhZqdVSW00BXd0ZT4OUuqaDGCmYM9FKBBBbO94G6ef7Ydgzbpin2+JRDUg8nfdpuezIaKnVCbQfEnbkopF3Ah21VC3jVcvBGf/vY9aqZcqs4ak6Z4eFjPgAHf2jWcve3041ZRw19A61SUoZT4eklPJQsEFHaiKj80NeoKt1Ve/UrjGxWW7U45pIfDJ0t9c1pBvoEdaQjSzbjLst+10IerMAtA7t4IviDSmf9Ub/B5s9bZIwhyv/AAAAAElFTkSuQmCC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#fff}a{color:#2f63ed}a:hover{color:#1e46b8}html{scroll-behavior:smooth}img{max-width:100%}.flow{display:flex;align-items:stretch;gap:0}
+.flow .st{flex:1 1 0;min-width:0;background:#fff;color:#1f2a37;border-radius:10px;padding:18px 16px;display:flex;flex-direction:column;gap:8px;box-shadow:0 10px 26px rgba(0,0,0,.18)}
+.flow .arr{flex:0 0 34px;display:flex;align-items:center;justify-content:center}
+.st-h{display:flex;align-items:center;gap:10px}
+.st-n{width:40px;height:40px;border-radius:50%;background:#1dab4b;color:#fff;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.st-r{font-size:13px;font-weight:700;color:#30419b;text-transform:uppercase;letter-spacing:.5px}
+.st h3{margin:2px 0 0;font-size:20px;font-weight:900;color:#14213d}
+.st ul{margin:0;padding-left:18px;font-size:14px;color:#374151;display:flex;flex-direction:column;gap:3px;flex-grow:1}
+.st-o{margin:4px 0 0;font-size:13px;background:#e8f6ed;color:#14532d;border-radius:6px;padding:8px 10px}
+@media(max-width:1000px){.flow{flex-direction:column}.flow .arr{flex-basis:30px}.flow .arr svg{transform:rotate(90deg)}}
+@media(max-width:640px){h1{font-size:34px!important}h2{font-size:26px!important}}</style>
+</head>
+<body>
+
+<div style="font-family: Roboto, Arial, sans-serif; color: #1f2a37; background: #ffffff; line-height: 1.55">
+
+  <!-- Thanh khuyến mại -->
+  <div style="background: #3f51b5; color: #ffffff; padding: 10px 20px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 16px; font-size: 14px; text-align: center">
+    <span style="font-weight: 700; background: #ffca28; color: #3a2a00; border-radius: 4px; padding: 2px 8px; font-size: 12px; letter-spacing: .5px">ƯU ĐÃI</span>
+    <span>Hạn chót bệnh án điện tử 31/12/2026. Đăng ký trước ngày này: trả 12 tháng tặng 3 tháng, trả 24 tháng tặng 6 tháng kèm màn hình hiển thị QR thanh toán</span>
+    <a href="#bao-gia" style="color: #ffffff; font-weight: 700; text-decoration: underline">Xem báo giá</a>
+  </div>
+
+  <!-- Thanh điều hướng -->
+  <header style="background: #ffffff; border-bottom: 1px solid #e5e7eb">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+      <a href="#" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #30419b; font-weight: 900; font-size: 22px; letter-spacing: -.3px">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAMFBMVEUAAAAwQZ0drUwvQJscqkssLX8vO5cCvD5VVaofSp4AAP8UqE0Ec3UvQ5gA/QEcqkvLqbjxAAAAEHRSTlMA+vqcbwMWBAMMAQ0CYwGVs3xw8AAABElJREFUeNqFll9oW1Ucxz89ufnTNqY7DZT50LSgZdUybJnKBCl9cMpMC/dBQVYL7XzQvfVFGOIkDgZ1OAhjgljQKlTqRMmw6aAiXIdCxdmmlWF0Wu4Yuj2V0KVdm5BbH25ye/8lPS/h/s43n/v7/s655/zAPTLzm08lWz3hJk9ESQAJzR0OuAOTkQLwYKtyADFcSQCQmFQbCyfXdADE342JNSAk+tONhDUgLJc6GpgJ/7IHiK4CXO8r5O1TwiE8Mwjw4Q0gE89SX3hFB5pHATB+dfhWHMJBHbgQHgFg5H5domICq6RiWa0jnBwEOLFVez6U9ReGr+hAcHq/dPYsbTmeWdOBD9iftWcpXMDm122Uog0pXDW8ULS7G8l6hVWghVA1p3FLuGsC92lvO40LZw1tCV5VHcYtoRvI0qwjy6rwngfIzjuq3Xh1m1UiBeDlJTOLvTZoO5xeCwHfrBh24c09IPhjyS786ZLMQ6nneN726g2Ak/PO7f7uHMDd7H6OrUo/8Of0kFNYvK4CRp9qrXU2+ZFCNqh3u7684VIrcPdWTRgc4iQQc+soplczYPR1Z0xh8n3znbI6H71n7dCQhRQQzAxRb5RUwCirIGhJDtTVEZkFiGdnEEx/p9cXmstj9C0SaNmNFFyzoWIbtB1eAriZCwEPVoxA4I+HNBCWftjNw17PW+KsQcMxPAugTykpCfQePWbujRwc4/eP7bXUVlPQtKNMZEAc+cSMNqe5+SYxJ7ISAR5VcsBjc1cB0B6eRXypVMYcy6N9noGSogNPXjRLnl4FTu+E8SINAURmhxrZKb6k1rZZgIOHAEo7aiNJdCEHiG4wnnu1kfCFMR2E6Af++teLjL23sbERA4ILy0BAfAYYX3uRm+3t7e2bQHJMBxaV1DUd1rNqxiX8XgM4QXChDxDHlVQgBsbtSbfwCMAjrVvJ+LdAZ060nOsG1rNqPcvLgMjPiO3eNcC4nfUXzo/oQOf5ccFpE5nU/HRNL64DIt+BYPuJNcD4b9hP+MUlHei8PI6AiXPdwD+v+GU5+ikg8iFQYHuqHAPjVs46U/dv/9cyQKc6Xn1MDUgp45pKZGrKWfoBKWU8Yt3XkXIMeDxXrs1vmD+X72SALjVl/dFEpl1ZRkPSAlbPR7OWX7lqOT8K0HneFmrxQ9aAM/bgXEBKKZ+P2mPahJRS9l90vKUlbSLty2MCm2ec+ZjIZ+xIP6BlfFzztWzve4JGDOhZqdVSW00BXd0ZT4OUuqaDGCmYM9FKBBBbO94G6ef7Ydgzbpin2+JRDUg8nfdpuezIaKnVCbQfEnbkopF3Ah21VC3jVcvBGf/vY9aqZcqs4ak6Z4eFjPgAHf2jWcve3041ZRw19A61SUoZT4eklPJQsEFHaiKj80NeoKt1Ve/UrjGxWW7U45pIfDJ0t9c1pBvoEdaQjSzbjLst+10IerMAtA7t4IviDSmf9Ub/B5s9bZIwhyv/AAAAAElFTkSuQmCC" alt="" width="38" height="38" style="display:block;width:38px;height:38px">
+        TL CLINIC
+      </a>
+      <nav aria-label="Mục lục" style="display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 13px; font-weight: 700; text-transform: uppercase">
+        <a href="#tinh-nang" style="color: #374151; text-decoration: none; padding: 8px 0">Tính năng</a>
+        <a href="#quy-trinh" style="color: #374151; text-decoration: none; padding: 8px 0">Quy trình khám</a>
+        <a href="#benh-an-dien-tu" style="color: #c62828; text-decoration: none; padding: 8px 0">Bệnh án điện tử</a>
+        <a href="#lien-thong" style="color: #374151; text-decoration: none; padding: 8px 0">Liên thông</a>
+        <a href="#bao-gia" style="color: #374151; text-decoration: none; padding: 8px 0">Báo giá</a>
+      </nav>
+      <a href="tel:0818003233" style="color:#30419b;font-weight:900;font-size:16px;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#30419b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>08.1800.3233</a>
+      <a href="#dang-ky" style="background: #2f63ed; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 14px; border-radius: 6px; padding: 11px 18px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Dùng thử miễn phí</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section style="background: #f3f6fb; border-bottom: 1px solid #e5e7eb">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 64px 20px 56px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+        <a href="#benh-an-dien-tu" style="align-self:flex-start;background:#fdecec;color:#b71c1c;border:1px solid #f3c0c0;font-weight:700;font-size:13px;border-radius:999px;padding:6px 14px;text-decoration:none">Bắt buộc bệnh án điện tử trước 31/12/2026: TL CLINIC đã sẵn sàng →</a>
+        <h1 style="margin: 0; font-size: 46px; line-height: 1.15; font-weight: 900; color: #14213d; letter-spacing: -.5px">Một phần mềm cho trọn một lượt khám, có sẵn bệnh án điện tử</h1>
+        <p style="margin: 0; font-size: 18px; color: #4b5563; max-width: 560px">Từ đặt lịch, khám, kê đơn, kết quả cận lâm sàng đến thu tiền và bệnh án điện tử. Liên thông Đơn thuốc quốc gia, hóa đơn điện tử và nhà thuốc TL GPP.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
+          <a href="#dang-ky" style="background: #3f51b5; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 16px; border-radius: 6px; padding: 14px 24px; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Đăng ký dùng thử</a>
+          <a href="#bao-gia" style="background: #ffffff; color: #2f63ed; border: 1px solid #2f63ed; text-decoration: none; font-weight: 700; font-size: 16px; border-radius: 6px; padding: 14px 24px; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Xem báo giá</a>
+        </div>
+        <a href="#quy-trinh" style="font-weight:700;font-size:15px;text-decoration:none">Xem 1 lượt khám trong 30 giây ↓</a>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 8px; font-size: 14px; color: #374151">
+          <span style="display: inline-flex; align-items: center; gap: 6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#43a047" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Không cần cài đặt</span>
+          <span style="display: inline-flex; align-items: center; gap: 6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#43a047" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Triển khai trong 1 ngày</span>
+          <span style="display: inline-flex; align-items: center; gap: 6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#43a047" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Hướng dẫn tận nơi theo vai trò</span>
+        </div>
+      </div>
+      <div style="flex: 1 1 520px; min-width: 0">
+        <div style="background: #ffffff; border: 1px solid #d6dbe4; border-radius: 10px; box-shadow: 0 18px 40px rgba(31,42,55,.12); overflow: hidden">
+          <div style="height: 30px; background: #eef1f6; display: flex; align-items: center; gap: 6px; padding: 0 12px" aria-hidden="true">
+            <span style="width: 10px; height: 10px; border-radius: 50%; background: #f87171"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #fbbf24"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #34d399"></span>
+          </div>
+          <img src="img_kham_chandoan.jpg" alt="Màn hình khám bệnh của TL CLINIC: chẩn đoán ICD-10, hướng xử trí, hẹn tái khám" style="display: block; width: 100%; height: auto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quy trình: 1 lượt khám -->
+  <section id="quy-trinh" style="background:#30419b;color:#fff;scroll-margin-top:0">
+    <div style="max-width:1240px;margin:0 auto;padding:64px 20px 56px">
+      <div style="text-align:center;max-width:760px;margin:0 auto 36px;display:flex;flex-direction:column;align-items:center;gap:10px">
+        <span style="background:#1dab4b;color:#fff;font-weight:700;font-size:13px;border-radius:999px;padding:5px 14px;letter-spacing:.3px">XEM TRONG 30 GIÂY</span>
+        <h2 style="margin:0;font-size:38px;line-height:1.2;font-weight:900">Một lượt khám trên TL CLINIC</h2>
+        <p style="margin:0;font-size:17px;color:#dfe4ff">Bệnh nhân đi qua 5 bước, thông tin nhập một lần và tự chuyển sang bước sau. Không ghi chép lại, không chuyển giấy giữa các phòng.</p>
+      </div>
+      <ol class="flow" style="list-style:none;margin:0;padding:0">
+        <li class="st">
+          <div class="st-h"><span class="st-n">1</span><span class="st-r">Lễ tân</span></div>
+          <h3>Tiếp đón</h3>
+          <ul><li>Tìm hoặc thêm hồ sơ bệnh nhân</li><li>Đăng ký khám, giá tự điền</li><li>Nhập sinh hiệu</li></ul>
+          <p class="st-o"><b>Chuyển sang:</b> hàng chờ của bác sĩ</p>
+          <a href="https://huongdanphongkham.tlgo.vn/#/le-tan" target="_blank" rel="noopener" style="font-size:13px;font-weight:700;color:#2f63ed;text-decoration:none">Xem hướng dẫn bước này →</a>
+        </li>
+        <li class="arr" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1dab4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+        <li class="st">
+          <div class="st-h"><span class="st-n">2</span><span class="st-r">Bác sĩ</span></div>
+          <h3>Khám và kê đơn</h3>
+          <ul><li>Thấy ngay dị ứng, tiền sử</li><li>Chỉ định xét nghiệm, siêu âm</li><li>Chẩn đoán ICD-10, kê đơn từ đơn mẫu</li></ul>
+          <p class="st-o"><b>Chuyển sang:</b> phòng cận lâm sàng, nhà thuốc</p>
+          <a href="https://huongdanphongkham.tlgo.vn/#/bac-si" target="_blank" rel="noopener" style="font-size:13px;font-weight:700;color:#2f63ed;text-decoration:none">Xem hướng dẫn bước này →</a>
+        </li>
+        <li class="arr" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1dab4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+        <li class="st">
+          <div class="st-h"><span class="st-n">3</span><span class="st-r">Cận lâm sàng</span></div>
+          <h3>Trả kết quả</h3>
+          <ul><li>Mẫu kết quả điền sẵn</li><li>Đính kèm hình ảnh</li><li>In phiếu kết quả A4</li></ul>
+          <p class="st-o"><b>Chuyển sang:</b> kết quả hiện ngay ở màn khám</p>
+          <a href="https://huongdanphongkham.tlgo.vn/#/cls" target="_blank" rel="noopener" style="font-size:13px;font-weight:700;color:#2f63ed;text-decoration:none">Xem hướng dẫn bước này →</a>
+        </li>
+        <li class="arr" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1dab4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+        <li class="st">
+          <div class="st-h"><span class="st-n">4</span><span class="st-r">Thu ngân</span></div>
+          <h3>Thu tiền</h3>
+          <ul><li>Thu từng phần hoặc toàn bộ</li><li>Tiền mặt hoặc QR chuyển khoản</li><li>Xuất hóa đơn điện tử</li></ul>
+          <p class="st-o"><b>Chuyển sang:</b> phiếu thu, hóa đơn cho khách</p>
+          <a href="https://huongdanphongkham.tlgo.vn/#/thu-ngan" target="_blank" rel="noopener" style="font-size:13px;font-weight:700;color:#2f63ed;text-decoration:none">Xem hướng dẫn bước này →</a>
+        </li>
+        <li class="arr" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1dab4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+        <li class="st">
+          <div class="st-h"><span class="st-n">5</span><span class="st-r">Bệnh án điện tử</span></div><span style="align-self:flex-start;background:#c62828;color:#fff;font-size:11px;font-weight:700;border-radius:4px;padding:2px 7px">Bắt buộc từ 2027</span>
+          <h3>Lưu hồ sơ</h3>
+          <ul><li>Tự tổng hợp 8 mục</li><li>Bác sĩ xác nhận, khóa hồ sơ</li><li>Tra cứu ở lần tái khám</li></ul>
+          <p class="st-o"><b>Kết quả:</b> bệnh án điện tử đầy đủ</p>
+          <a href="https://huongdanphongkham.tlgo.vn/#/bac-si/benh-an" target="_blank" rel="noopener" style="font-size:13px;font-weight:700;color:#2f63ed;text-decoration:none">Xem hướng dẫn bước này →</a>
+        </li>
+      </ol>
+      <div style="margin-top:30px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+        <a href="#tinh-nang" style="background:#fff;color:#30419b;text-decoration:none;font-weight:700;font-size:15px;border-radius:6px;padding:13px 22px;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center">Xem chi tiết từng bước</a>
+        <a href="#dang-ky" style="background:#1dab4b;color:#fff;text-decoration:none;font-weight:700;font-size:15px;border-radius:6px;padding:13px 22px;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center">Đăng ký demo 1 lượt khám</a>
+        <a href="https://huongdanphongkham.tlgo.vn/" target="_blank" rel="noopener" style="background:transparent;color:#fff;border:2px solid #fff;text-decoration:none;font-weight:700;font-size:15px;border-radius:6px;padding:11px 20px;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>Xem hướng dẫn sử dụng</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bệnh án điện tử: hạn chót -->
+  <section id="benh-an-dien-tu" style="background:#fff8e1;border-bottom:1px solid #f5e1a4">
+    <div style="max-width:1200px;margin:0 auto;padding:64px 20px;display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+      <div style="flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:14px">
+        <span style="align-self:flex-start;background:#c62828;color:#fff;font-weight:700;font-size:13px;border-radius:4px;padding:4px 10px;letter-spacing:.3px">QUY ĐỊNH BẮT BUỘC</span>
+        <h2 style="margin:0;font-size:36px;line-height:1.2;font-weight:900;color:#14213d">Phòng khám phải có bệnh án điện tử trước 31/12/2026</h2>
+        <p style="margin:0;font-size:17px;color:#374151">Theo Thông tư 13/2025/TT-BYT của Bộ Y tế, các cơ sở khám bệnh, chữa bệnh ngoài bệnh viện, kể cả cơ sở điều trị ngoại trú, phải hoàn thành triển khai hồ sơ bệnh án điện tử <b>chậm nhất ngày 31/12/2026</b>. Chỉ thị 04/CT-BYT ngày 07/4/2026 tiếp tục yêu cầu đẩy mạnh triển khai đúng hạn.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:stretch">
+          <div style="background:#fff;border:2px solid #c62828;border-radius:10px;padding:12px 18px;min-width:150px">
+            <div style="font-size:13px;color:#7f1d1d;font-weight:700">Còn lại</div>
+            <div style="font-size:34px;font-weight:900;color:#c62828;line-height:1.1"><span id="days-left">41</span> ngày</div>
+            <div style="font-size:13px;color:#4b5563">đến 31/12/2026</div>
+          </div>
+          <div style="flex:1 1 240px;background:#fff;border:1px solid #f5e1a4;border-radius:10px;padding:12px 16px;font-size:15px;color:#374151;display:flex;align-items:center">Đăng ký TL CLINIC trong tháng này: triển khai xong trong vài ngày, kịp hạn và còn được hưởng ưu đãi tặng đến 6 tháng sử dụng.</div>
+        </div>
+        <h3 style="margin:8px 0 0;font-size:19px;color:#14213d">Bệnh án điện tử trên TL CLINIC</h3>
+        <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 18px;font-size:15px;color:#1f2a37">
+          <li style="display:flex;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1dab4b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Tự tạo từ lượt khám, không nhập lại</li>
+          <li style="display:flex;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1dab4b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>8 mục: hành chính đến chi phí</li>
+          <li style="display:flex;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1dab4b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Bác sĩ xác nhận, khóa chỉ đọc</li>
+          <li style="display:flex;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1dab4b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Nhật ký mọi thao tác chỉnh sửa</li>
+          <li style="display:flex;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1dab4b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>Mỗi lần khám một bệnh án riêng</li>
+          <li style="display:flex;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1dab4b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M5 12l5 5L20 7"/></svg>In bệnh án ngoại trú A4 khi cần</li>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px">
+          <a href="#dang-ky" style="background:#c62828;color:#fff;text-decoration:none;font-weight:700;font-size:16px;border-radius:6px;padding:14px 22px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Triển khai bệnh án điện tử ngay</a>
+          <a href="#bao-gia" style="background:#fff;color:#30419b;border:1px solid #30419b;text-decoration:none;font-weight:700;font-size:16px;border-radius:6px;padding:14px 22px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Xem chi phí</a>
+        </div>
+      </div>
+      <div style="flex:1 1 480px;min-width:0">
+        <img src="img_benhan.jpg" alt="Màn hình bệnh án điện tử TL CLINIC với 8 mục và nút Hoàn thành &amp; xác nhận" style="display:block;width:100%;height:auto;border:1px solid #e0d6b0;border-radius:10px;box-shadow:0 16px 36px rgba(31,42,55,.14)">
+      </div>
+    </div>
+  </section>
+
+  <!-- Phù hợp với -->
+  <section style="border-bottom: 1px solid #e5e7eb">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 26px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 28px; font-size: 15px; color: #4b5563">
+      <span style="font-weight: 700; color: #14213d">Phù hợp với:</span>
+      <span>Phòng khám đa khoa</span><span>Phòng khám chuyên khoa</span><span>Siêu âm, chẩn đoán hình ảnh</span><span>Phòng khám có xét nghiệm</span><span>Từ 1 bác sĩ đến nhiều phòng ban</span>
+    </div>
+  </section>
+
+  <!-- Tính năng -->
+  <section id="tinh-nang" style="max-width: 1200px; margin: 0 auto; padding: 56px 20px 24px; display: flex; flex-direction: column; gap: 56px">
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+      <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+        <span style="font-size: 13px; font-weight: 700; color: #43a047; text-transform: uppercase; letter-spacing: .6px">Khám bệnh và kê đơn</span>
+        <h2 style="margin: 0; font-size: 30px; font-weight: 900; color: #14213d; line-height: 1.25">Kê đơn nhanh, an toàn hơn</h2>
+        <ul style="margin: 0; padding-left: 20px; font-size: 16px; color: #374151; display: flex; flex-direction: column; gap: 8px">
+          <li>Dị ứng của bệnh nhân hiện nổi bật ngay khi mở lượt khám.</li>
+          <li>Chọn thuốc từ thư viện hơn 54.000 thuốc có số đăng ký, hoặc từ đơn mẫu.</li>
+          <li>Hẹn tái khám tự tính ngày; đơn A5 in kèm mã QR tra cứu.</li>
+        </ul>
+      </div>
+      <div style="flex: 1 1 520px; min-width: 0">
+        <img src="img_kham_donthuoc.jpg" alt="Tab Đơn thuốc trong màn khám bệnh" style="display: block; width: 100%; height: auto; border: 1px solid #d6dbe4; border-radius: 8px; box-shadow: 0 10px 28px rgba(31,42,55,.10)">
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap-reverse; gap: 40px; align-items: center">
+      <div style="flex: 1 1 520px; min-width: 0">
+        <img src="img_cls_ketqua.jpg" alt="Màn nhập kết quả cận lâm sàng với mẫu siêu âm và hình ảnh" style="display: block; width: 100%; height: auto; border: 1px solid #d6dbe4; border-radius: 8px; box-shadow: 0 10px 28px rgba(31,42,55,.10)">
+      </div>
+      <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+        <span style="font-size: 13px; font-weight: 700; color: #43a047; text-transform: uppercase; letter-spacing: .6px">Cận lâm sàng</span>
+        <h2 style="margin: 0; font-size: 30px; font-weight: 900; color: #14213d; line-height: 1.25">Kết quả siêu âm, xét nghiệm theo mẫu</h2>
+        <ul style="margin: 0; padding-left: 20px; font-size: 16px; color: #374151; display: flex; flex-direction: column; gap: 8px">
+          <li>Mỗi dịch vụ một mẫu mô tả điền sẵn, chỉ sửa chỗ bất thường.</li>
+          <li>Đính kèm hình ảnh, in phiếu kết quả A4 đẹp, ảnh căn giữa.</li>
+          <li>Kèm thư viện 17 mẫu kết quả miễn phí tại mauketqua.tlgo.vn.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Liên thông -->
+  <section id="lien-thong" style="background: #f3f6fb; margin-top: 56px; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 64px 20px">
+      <h2 style="margin: 0 0 28px; text-align: center; font-size: 32px; font-weight: 900; color: #14213d">Kết nối sẵn những gì phòng khám cần</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 22px; display: flex; flex-direction: column; gap: 8px">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2f63ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v4H9zM5 5h4M15 5h4v16H5V5"></path><path d="M9 12h6M9 16h4"></path></svg>
+          <h3 style="margin: 0; font-size: 18px; color: #14213d">Đơn thuốc quốc gia</h3>
+          <p style="margin: 0; font-size: 15px; color: #4b5563">Đơn mang mã theo chuẩn liên thông, mỗi bác sĩ một tài khoản; theo dõi trạng thái đã gửi ngay trong bệnh án.</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 22px; display: flex; flex-direction: column; gap: 8px">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2f63ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"></path><path d="M9 7h6M9 11h6M9 15h4"></path></svg>
+          <h3 style="margin: 0; font-size: 18px; color: #14213d">Hóa đơn điện tử</h3>
+          <p style="margin: 0; font-size: 15px; color: #4b5563">Xuất hóa đơn cho cá nhân, doanh nghiệp ngay tại quầy thu ngân; tra cứu mã số thuế tự điền thông tin.</p>
+        </div>
+        <div style="background: #ffffff; border: 2px solid #43a047; border-radius: 8px; padding: 21px; display: flex; flex-direction: column; gap: 8px">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#43a047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"></rect><path d="M8 7V4h8v3M12 11v6M9 14h6"></path></svg>
+          <h3 style="margin: 0; font-size: 18px; color: #14213d">Nhà thuốc TL GPP</h3>
+          <p style="margin: 0; font-size: 15px; color: #4b5563">Bác sĩ hoàn thành khám là đơn thuốc sang thẳng phần mềm nhà thuốc để bán. Có thể dùng chung danh mục thuốc.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Báo giá -->
+  <section id="bao-gia" style="max-width: 1200px; margin: 0 auto; padding: 72px 20px 40px">
+    <div style="text-align: center; max-width: 760px; margin: 0 auto 26px; display: flex; flex-direction: column; gap: 10px; align-items: center">
+      <h2 style="margin: 0; font-size: 34px; font-weight: 900; color: #14213d">Báo giá theo số tài khoản</h2>
+      <p style="margin: 0; font-size: 17px; color: #4b5563">Phí khởi tạo lần đầu 500.000đ, gồm cấp mã cơ sở, khai báo danh mục và hướng dẫn sử dụng.</p>
+    </div>
+    <div role="group" aria-label="Chọn kỳ thanh toán" style="display: flex; justify-content: center; margin-bottom: 28px">
+      <div style="display: inline-flex; flex-wrap: wrap; justify-content: center; background: #eef2f8; border-radius: 8px; padding: 4px; gap: 4px">
+        <span id="terms" style="display:contents"></span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; align-items: stretch">
+      <span id="plans" style="display:contents"></span>
+    </div>
+    <p style="margin: 18px 0 0; text-align: center; font-size: 13px; color: #6b7280">Giá chưa gồm phí khởi tạo 500.000đ (một lần). Gói Basic gồm 1 tài khoản bác sĩ và 1 tài khoản quản trị. Ưu đãi tặng tháng và màn hình QR áp dụng cho đăng ký mới đến hết 31/12/2026.</p>
+  </section>
+
+  <!-- Khuyến mại nổi bật -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 16px 20px 64px">
+    <div style="background: #3f51b5; color: #ffffff; border-radius: 12px; padding: 36px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+        <span style="align-self: flex-start; background: #ffca28; color: #3a2a00; font-weight: 700; font-size: 13px; border-radius: 4px; padding: 3px 10px">Đến hết 31/12/2026</span>
+        <h2 style="margin: 0; font-size: 30px; font-weight: 900; line-height: 1.25">Đăng ký mới, dùng thêm đến 6 tháng</h2>
+        <p style="margin: 0; font-size: 16px; color: #dfe4ff">Trả trước 12 tháng được dùng 15 tháng. Trả trước 24 tháng được dùng 30 tháng và tặng màn hình hiển thị QR thanh toán đặt tại quầy, bệnh nhân quét là chuyển khoản đúng số tiền.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px">
+        <div style="background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3); border-radius: 10px; padding: 18px 22px; min-width: 170px">
+          <div style="font-size: 14px; color: #dfe4ff">Trả 12 tháng</div>
+          <div style="font-size: 30px; font-weight: 900">+3 tháng</div>
+        </div>
+        <div style="background: #ffffff; color: #14213d; border-radius: 10px; padding: 18px 22px; min-width: 200px">
+          <div style="font-size: 14px; color: #4b5563">Trả 24 tháng</div>
+          <div style="font-size: 30px; font-weight: 900; color: #3f51b5">+6 tháng</div>
+          <div style="font-size: 14px; font-weight: 700; color: #2e7d32">+ Màn hình QR thanh toán</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Triển khai -->
+  <section style="background: #f3f6fb; border-top: 1px solid #e5e7eb">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 64px 20px">
+      <h2 style="margin: 0 0 28px; text-align: center; font-size: 32px; font-weight: 900; color: #14213d">Bắt đầu trong 4 bước</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px">
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px"><div style="font-size: 30px; font-weight: 900; color: #2f63ed">01</div><p style="margin: 6px 0 0; font-size: 15px">Cấp mã cơ sở và tài khoản quản trị.</p></div>
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px"><div style="font-size: 30px; font-weight: 900; color: #2f63ed">02</div><p style="margin: 6px 0 0; font-size: 15px">Khai báo phòng ban, dịch vụ, bảng giá, thuốc, mẫu kết quả, mẫu in.</p></div>
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px"><div style="font-size: 30px; font-weight: 900; color: #2f63ed">03</div><p style="margin: 6px 0 0; font-size: 15px">Tạo tài khoản, phân quyền cho từng nhân sự.</p></div>
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px"><div style="font-size: 30px; font-weight: 900; color: #2f63ed">04</div><p style="margin: 6px 0 0; font-size: 15px">Hướng dẫn theo vai trò, chạy thử một lượt khám trọn vẹn.</p></div>
+      </div>
+      <p style="margin: 18px 0 0; text-align: center; font-size: 14px; color: #4b5563">Chỉ cần máy tính có trình duyệt Chrome, Internet và máy in A4/A5. Tài liệu hướng dẫn: huongdanphongkham.tlgo.vn</p>
+    </div>
+  </section>
+
+  <!-- Đăng ký -->
+  <section id="dang-ky" style="max-width: 1200px; margin: 0 auto; padding: 72px 20px">
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start">
+      <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+        <h2 style="margin: 0; font-size: 34px; font-weight: 900; color: #14213d; line-height: 1.2">Đăng ký dùng thử và nhận tư vấn</h2>
+        <p style="margin: 0; font-size: 17px; color: #4b5563">Để lại thông tin, chúng tôi gọi lại trong giờ làm việc để demo phần mềm và báo giá theo quy mô phòng khám.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 16px; margin-top: 6px">
+          <span style="display: flex; align-items: center; gap: 10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2f63ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Hotline / Zalo: <a href="tel:0818003233" style="font-weight:700">08.1800.3233</a></span>
+          <span style="display: flex; align-items: center; gap: 10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2f63ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"></path></svg><a href="https://tlgo.vn" style="font-weight: 700">TLGo.vn</a></span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px">
+          <a href="tel:0818003233" style="background:#1dab4b;color:#fff;text-decoration:none;font-weight:700;font-size:15px;border-radius:6px;padding:12px 18px;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center">Gọi 08.1800.3233</a>
+          <a href="https://zalo.me/0818003233" target="_blank" rel="noopener" style="background:#0068ff;color:#fff;text-decoration:none;font-weight:700;font-size:15px;border-radius:6px;padding:12px 18px;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center">Nhắn Zalo</a>
+        </div>
+      </div>
+      <form id="lead-form" novalidate style="position:relative; flex: 1 1 440px; min-width: 0; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; box-shadow: 0 10px 30px rgba(31,42,55,.08); padding: 26px; display: flex; flex-direction: column; gap: 14px">
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700">Họ và tên<input type="text" name="ten" required autocomplete="name" placeholder="Nguyễn Văn A" style="height: 44px; border: 1px solid #cfd6df; border-radius: 6px; padding: 0 12px; font: inherit; font-weight: 400"></label>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700">Số điện thoại<input type="tel" name="sdt" required autocomplete="tel" inputmode="tel" placeholder="09xx xxx xxx" style="height: 44px; border: 1px solid #cfd6df; border-radius: 6px; padding: 0 12px; font: inherit; font-weight: 400"></label>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700">Tên phòng khám<input type="text" name="pk" placeholder="Phòng khám đa khoa ..." style="height: 44px; border: 1px solid #cfd6df; border-radius: 6px; padding: 0 12px; font: inherit; font-weight: 400"></label>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700">Gói quan tâm
+          <select name="goi" style="height: 44px; border: 1px solid #cfd6df; border-radius: 6px; padding: 0 10px; font: inherit; font-weight: 400; background: #ffffff">
+            <option>Basic (2 tài khoản)</option><option>Plus (3–5 tài khoản)</option><option>Pro (6–20 tài khoản)</option><option>Trên 20 tài khoản</option>
+          </select>
+        </label>
+        <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <p id="nv-line" hidden style="margin:0;font-size:14px;color:#14532d;background:#e8f6ed;border-radius:6px;padding:8px 12px"></p>
+        <button id="lead-btn" type="submit" style="height: 48px; background: #3f51b5; color: #ffffff; border: 0; border-radius: 6px; font: inherit; font-size: 16px; font-weight: 700; cursor: pointer">Nhận tư vấn và dùng thử</button>
+        <p style="margin: 0; font-size: 12.5px; color: #6b7280; text-align: center">Thông tin chỉ dùng để liên hệ tư vấn phần mềm TL CLINIC.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer style="background: #14213d; color: #c7cede">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 28px 20px; display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; font-size: 14px">
+      <span style="display:flex;align-items:center;gap:10px"><span style="background:#fff;border-radius:6px;padding:4px;display:inline-flex"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAMFBMVEUAAAAwQZ0drUwvQJscqkssLX8vO5cCvD5VVaofSp4AAP8UqE0Ec3UvQ5gA/QEcqkvLqbjxAAAAEHRSTlMA+vqcbwMWBAMMAQ0CYwGVs3xw8AAABElJREFUeNqFll9oW1Ucxz89ufnTNqY7DZT50LSgZdUybJnKBCl9cMpMC/dBQVYL7XzQvfVFGOIkDgZ1OAhjgljQKlTqRMmw6aAiXIdCxdmmlWF0Wu4Yuj2V0KVdm5BbH25ye/8lPS/h/s43n/v7/s655/zAPTLzm08lWz3hJk9ESQAJzR0OuAOTkQLwYKtyADFcSQCQmFQbCyfXdADE342JNSAk+tONhDUgLJc6GpgJ/7IHiK4CXO8r5O1TwiE8Mwjw4Q0gE89SX3hFB5pHATB+dfhWHMJBHbgQHgFg5H5domICq6RiWa0jnBwEOLFVez6U9ReGr+hAcHq/dPYsbTmeWdOBD9iftWcpXMDm122Uog0pXDW8ULS7G8l6hVWghVA1p3FLuGsC92lvO40LZw1tCV5VHcYtoRvI0qwjy6rwngfIzjuq3Xh1m1UiBeDlJTOLvTZoO5xeCwHfrBh24c09IPhjyS786ZLMQ6nneN726g2Ak/PO7f7uHMDd7H6OrUo/8Of0kFNYvK4CRp9qrXU2+ZFCNqh3u7684VIrcPdWTRgc4iQQc+soplczYPR1Z0xh8n3znbI6H71n7dCQhRQQzAxRb5RUwCirIGhJDtTVEZkFiGdnEEx/p9cXmstj9C0SaNmNFFyzoWIbtB1eAriZCwEPVoxA4I+HNBCWftjNw17PW+KsQcMxPAugTykpCfQePWbujRwc4/eP7bXUVlPQtKNMZEAc+cSMNqe5+SYxJ7ISAR5VcsBjc1cB0B6eRXypVMYcy6N9noGSogNPXjRLnl4FTu+E8SINAURmhxrZKb6k1rZZgIOHAEo7aiNJdCEHiG4wnnu1kfCFMR2E6Af++teLjL23sbERA4ILy0BAfAYYX3uRm+3t7e2bQHJMBxaV1DUd1rNqxiX8XgM4QXChDxDHlVQgBsbtSbfwCMAjrVvJ+LdAZ060nOsG1rNqPcvLgMjPiO3eNcC4nfUXzo/oQOf5ccFpE5nU/HRNL64DIt+BYPuJNcD4b9hP+MUlHei8PI6AiXPdwD+v+GU5+ikg8iFQYHuqHAPjVs46U/dv/9cyQKc6Xn1MDUgp45pKZGrKWfoBKWU8Yt3XkXIMeDxXrs1vmD+X72SALjVl/dFEpl1ZRkPSAlbPR7OWX7lqOT8K0HneFmrxQ9aAM/bgXEBKKZ+P2mPahJRS9l90vKUlbSLty2MCm2ec+ZjIZ+xIP6BlfFzztWzve4JGDOhZqdVSW00BXd0ZT4OUuqaDGCmYM9FKBBBbO94G6ef7Ydgzbpin2+JRDUg8nfdpuezIaKnVCbQfEnbkopF3Ah21VC3jVcvBGf/vY9aqZcqs4ak6Z4eFjPgAHf2jWcve3041ZRw19A61SUoZT4eklPJQsEFHaiKj80NeoKt1Ve/UrjGxWW7U45pIfDJ0t9c1pBvoEdaQjSzbjLst+10IerMAtA7t4IviDSmf9Ub/B5s9bZIwhyv/AAAAAElFTkSuQmCC" alt="Logo TL CLINIC" width="26" height="26" style="display:block"></span>© 2026 Công ty TNHH Công nghệ và TM Ánh Sáng · TL CLINIC</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 18px"><a href="https://huongdanphongkham.tlgo.vn" style="color: #ffffff">Hướng dẫn sử dụng</a><a href="https://mauketqua.tlgo.vn" style="color: #ffffff">Thư viện mẫu kết quả</a><a href="https://tlgo.vn" style="color: #ffffff">TLGo.vn</a></span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){
+var term='12';
+var fmt=function(n){return n.toLocaleString('vi-VN').replace(/,/g,'.')+'đ';};
+var termDefs=[{id:'m',label:'Theo tháng',badge:''},{id:'12',label:'12 tháng',badge:'+3 tháng'},{id:'24',label:'24 tháng',badge:'+6 tháng'}];
+var defs=[{name:'Basic',seats:'2 tài khoản: 1 bác sĩ, 1 quản trị',m:100000},{name:'Plus',seats:'3 đến 5 tài khoản',m:139000,hot:true},{name:'Pro',seats:'6 đến 20 tài khoản',m:169000},{name:'Trên 20 tài khoản',seats:'Chuỗi phòng khám, nhiều chi nhánh',m:0}];
+function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function render(){
+ document.getElementById('terms').innerHTML=termDefs.map(function(t){var on=t.id===term;return '<button type="button" data-t="'+t.id+'" aria-pressed="'+on+'" style="border:0;border-radius:6px;padding:10px 18px;min-height:44px;font:inherit;font-size:15px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;'+(on?'background:#fff;color:#3f51b5;box-shadow:0 1px 4px rgba(0,0,0,.12);':'background:transparent;color:#4b5563;')+'">'+t.label+(t.badge?'<span style="margin-left:6px;background:#ffca28;color:#3a2a00;font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px">'+t.badge+'</span>':'')+'</button>';}).join('');
+ document.getElementById('plans').innerHTML=defs.map(function(d){
+  var price,unit,sub,gift='';
+  if(!d.m){price='Liên hệ';unit='';sub='Báo giá theo quy mô';}
+  else if(term==='m'){price=fmt(d.m);unit='/tháng';sub='Thanh toán hằng tháng';}
+  else{var mo=term==='12'?12:24,b=term==='12'?3:6;price=fmt(d.m*mo);unit='/'+mo+' tháng';sub='Dùng '+(mo+b)+' tháng, chỉ '+fmt(Math.round(d.m*mo/(mo+b)))+'/tháng';gift=term==='12'?'Tặng thêm 3 tháng sử dụng':'Tặng thêm 6 tháng sử dụng<br>+ Màn hình hiển thị QR thanh toán';}
+  var hot=!!d.hot;
+  return '<div style="background:#fff;border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:10px;'+(hot?'border:2px solid #3f51b5;box-shadow:0 14px 34px rgba(63,81,181,.16);':'border:1px solid #e5e7eb;')+'">'+
+   (hot?'<span style="align-self:flex-start;background:#3f51b5;color:#fff;font-size:12px;font-weight:700;border-radius:4px;padding:3px 9px">Được chọn nhiều</span>':'')+
+   '<h3 style="margin:0;font-size:22px;font-weight:900;color:#14213d">'+esc(d.name)+'</h3>'+
+   '<p style="margin:0;font-size:14px;color:#4b5563;min-height:42px">'+esc(d.seats)+'</p>'+
+   '<div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap"><span style="font-size:32px;font-weight:900;color:#14213d">'+price+'</span><span style="font-size:14px;color:#4b5563">'+unit+'</span></div>'+
+   '<p style="margin:0;font-size:14px;color:#374151;min-height:22px">'+sub+'</p>'+
+   (gift?'<div style="background:#fff8e1;border:1px solid #ffe08a;color:#6b4e00;border-radius:6px;padding:9px 11px;font-size:13.5px;font-weight:500">'+gift+'</div>':'')+
+   '<ul style="margin:4px 0 0;padding-left:18px;font-size:14px;color:#374151;display:flex;flex-direction:column;gap:4px;flex-grow:1"><li>Đủ tất cả phân hệ</li><li>Liên thông đơn thuốc, hóa đơn điện tử</li><li>Hỗ trợ qua điện thoại, Zalo</li></ul>'+
+   '<a href="#dang-ky" style="margin-top:6px;text-align:center;text-decoration:none;font-weight:700;font-size:15px;border-radius:6px;padding:12px 16px;min-height:44px;box-sizing:border-box;'+(hot?'background:#3f51b5;color:#fff;':'background:#fff;color:#2f63ed;border:1px solid #2f63ed;')+'">'+(d.m?'Đăng ký gói '+esc(d.name):'Liên hệ báo giá')+'</a></div>';
+ }).join('');
+}
+document.getElementById('terms').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;term=b.getAttribute('data-t');render();});
+render();
+var d=Math.ceil((new Date(2026,11,31,23,59,59)-new Date())/864e5);var el=document.getElementById('days-left');if(el){el.textContent=d>0?d:0;}
+})();
+</script>
+<script>
+/* ===== Cấu hình: dán link Web App của Google Apps Script vào đây ===== */
+var SCRIPT_URL = '';
+var DEFAULT_PHONE = '0818003233';
+(function(){
+  function norm(v){ v=String(v||'').replace(/\D/g,''); if(v.indexOf('84')===0 && v.length>=11) v='0'+v.slice(2); return /^0\d{8,10}$/.test(v)?v:''; }
+  function pretty(v){ return v.length===10 ? v.slice(0,4)+'.'+v.slice(4,7)+'.'+v.slice(7) : v; }
+  var q=new URLSearchParams(location.search);
+  var nv=norm(q.get('nv'));
+  try{ if(nv) localStorage.setItem('tl_nv',nv); else nv=norm(localStorage.getItem('tl_nv')); }catch(e){}
+  if(nv && nv!==DEFAULT_PHONE){
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(a){ a.href='tel:'+nv; });
+    document.querySelectorAll('a[href*="zalo.me/"]').forEach(function(a){ a.href='https://zalo.me/'+nv; });
+    var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);
+    var n, list=[]; while((n=w.nextNode())) if(n.nodeValue.indexOf('08.1800.3233')>-1) list.push(n);
+    list.forEach(function(t){ t.nodeValue=t.nodeValue.split('08.1800.3233').join(pretty(nv)); });
+    if(SCRIPT_URL){
+      fetch(SCRIPT_URL+'?nv='+nv).then(function(r){return r.json();}).then(function(d){
+        if(d && d.ok && d.ten){ var el=document.getElementById('nv-line'); el.textContent='Tư vấn viên phụ trách: '+d.ten+' – '+pretty(nv); el.hidden=false; }
+      }).catch(function(){});
+    }
+  }
+  var f=document.getElementById('lead-form'), btn=document.getElementById('lead-btn');
+  function msg(text,ok){ var m=f.querySelector('.lead-msg'); if(!m){ m=document.createElement('p'); m.className='lead-msg'; m.setAttribute('role','status'); f.appendChild(m);} m.style.cssText='margin:0;border-radius:6px;padding:10px 12px;font-size:14px;'+(ok?'background:#e7f5ec;color:#1e5b24;border:1px solid #b7dfbb':'background:#fdecec;color:#8a1f1f;border:1px solid #f3c0c0'); m.textContent=text; }
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ten=f.ten.value.trim(), sdt=norm(f.sdt.value);
+    if(!ten){ msg('Vui lòng nhập họ và tên.',false); f.ten.focus(); return; }
+    if(!sdt){ msg('Số điện thoại chưa đúng, vui lòng kiểm tra lại.',false); f.sdt.focus(); return; }
+    if(f.website.value) return;
+    if(!SCRIPT_URL){ msg('Bản xem thử: form chưa nối Google Sheet.',true); return; }
+    var data=new URLSearchParams({ten:ten,sdt:sdt,pk:f.pk.value.trim(),goi:f.goi.value,nv:nv||'',trang:location.href,
+      utm_source:q.get('utm_source')||'',utm_campaign:q.get('utm_campaign')||'',website:''});
+    btn.disabled=true; btn.textContent='Đang gửi...';
+    fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:data}).then(function(){
+      msg('Đã nhận thông tin. Tư vấn viên sẽ gọi lại cho anh/chị trong thời gian sớm nhất.',true); f.reset(); btn.textContent='Đã gửi';
+    }).catch(function(){
+      msg('Chưa gửi được. Vui lòng gọi '+pretty(nv||DEFAULT_PHONE)+' hoặc thử lại.',false); btn.disabled=false; btn.textContent='Nhận tư vấn và dùng thử';
+    });
+  });
+})();
+</script>
+</body>
+</html>
